@@ -16,12 +16,12 @@ namespace Full_GRASP_And_SOLID
         public static void Main(string[] args)
         {
             Catalog catalog1 = new Catalog();
-
+            catalog1.PopulateCatalogs();
             Recipe recipe = new Recipe();
 
-            recipe.FinalProduct = GetProduct("Café con leche");
-            recipe.AddStep(GetProduct("Café"), 100, GetEquipment("Cafetera"), 120);
-            recipe.AddStep(GetProduct("Leche"), 200, GetEquipment("Hervidor"), 60);
+            recipe.FinalProduct = catalog1.GetProduct("Café con leche");
+            recipe.AddStep(catalog1.GetProduct("Café"), 100, catalog1.GetEquipment("Cafetera"), 120);
+            recipe.AddStep(catalog1.GetProduct("Leche"), 200, catalog1.GetEquipment("Hervidor"), 60);
 
             IPrinter printer;
             printer = new ConsolePrinter();
