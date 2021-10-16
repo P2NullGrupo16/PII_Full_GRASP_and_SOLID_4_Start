@@ -30,6 +30,8 @@ namespace Full_GRASP_And_SOLID
             printer.PrintRecipe(recipe);
 
            // catalog1.AddProductToCatalog("Bla Bla bla", 100);
+           // Se creó una clase Catalog, para aprovechar el patrón Creator y a su vez aplicamos Expert y SRP crendo esta misma clase.
+           // Se modificó Recipe teniendo en cuenta el patrón Creator
         }
 
         
